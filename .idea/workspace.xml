@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4de9a545-5be9-4d9c-8b80-16cb02392d81" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/app/GreeterApplication.scala" afterPath="$PROJECT_DIR$/src/main/scala/app/GreeterApplication.scala" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/app/GreeterApplication$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/app/GreeterApplication$delayedInit$body.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/app/GreeterApplication.class" afterPath="" />
-    </list>
+    <list default="true" id="4de9a545-5be9-4d9c-8b80-16cb02392d81" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
