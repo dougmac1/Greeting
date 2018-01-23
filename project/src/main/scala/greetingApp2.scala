@@ -3,7 +3,9 @@ package app
 import scala.io.StdIn
 
 
-class Person(name : String) {
+class Person(name : String, age : Int) {
+
+  private val years : String = if(age == 1) "year" else "years"
 
   def speak() : String = {
 
@@ -13,7 +15,7 @@ class Person(name : String) {
 
     }  else {
 
-      "Hello " + name
+      s"Hello $name, you are $age $years old."
     }
   }
 }
@@ -25,10 +27,10 @@ object Prompt {
   def ask(message : String) = StdIn.readLine(message)
 }
 
-  val name = StdIn.readLine("What is your name?")
+  val name = Prompt.ask("What is your name?")
+  val age = Prompt.ask("How old are you?")
+  val person = new Person(name, age.toInt)
 
-  val p = new Person(name)
-
-  println(p.speak())
+  println(person.speak())
 
 }
