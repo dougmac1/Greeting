@@ -1,0 +1,14 @@
+yes 1) Simple Build Tool
+yes 2) Run the code to produce an output
+no 3) def = defines   val = specific   var = character
+yes 4) println = print line   print = prints an output
+yes 5) git add, git commit, git push
+yes 6) so when you commit you don't commit all of the hidden files, you can exclude certain ones
+yes 7) often
+no 8) 1
+no 9) to make a script executable
+yes 10) output the text "What is your name" 
+no 11) String
+no 12) Unit
+yes 13) Standard Input
+yes 14) Will print "who are you"
