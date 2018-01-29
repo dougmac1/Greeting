@@ -1,14 +1,8 @@
 package scala.app
 
 import Models.{Person, SavingsAccount, cashISAAccount}
+import Views.Prompt
 
-import scala.io.StdIn
-
-object Prompt {
-
-  def ask(message : String) : String = StdIn.readLine(message)
-
-}
 
 object GreetingsApplication extends App {
 
@@ -29,8 +23,6 @@ object GreetingsApplication extends App {
   val child = new Person("David")
 
   println(p.speak())
-
-
 }
 
 
