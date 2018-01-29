@@ -50,6 +50,7 @@ object PetApp extends App {
 
       override def speak: String = s"I'm $name, I travel at $speed mph, $spotString, $amountString"
     }
+  //
 
     class Lion (name: String, speed : Int, gender : Boolean) extends Cat(name) {
 
