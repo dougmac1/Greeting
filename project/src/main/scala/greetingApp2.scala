@@ -1,60 +1,8 @@
 package scala.app
 
+import Models.{Person, SavingsAccount, cashISAAccount}
+
 import scala.io.StdIn
-
-
-abstract class BankAccount(accountNumber : String, val balance: Double) {
-
-  def withdraw(amount: Double) : BankAccount
-
-  def deposit(amount: Double) : BankAccount
-
-  override def toString: String = s"Account number: $accountNumber balance: $balance"
-
-}
-
-class SavingsAccount(accountNumber: String,
-                     balance : Double) extends BankAccount(accountNumber,balance) {
-
-  override def deposit(amount: Double): BankAccount = new SavingsAccount(accountNumber, balance + amount)
-
-  override def withdraw(amount: Double): BankAccount = new SavingsAccount(accountNumber, balance - amount)
-
-}
-
-class cashISAAccount(accountNumber: String, balance: Double) extends BankAccount(accountNumber, balance) {
-
-  private val depositThreshold: Double = 200.00
-  override def deposit(amount: Double) = if (amount > depositThreshold) {
-    val difference = amount - depositThreshold
-    println(s"You cant deposit more than $depositThreshold, Excess: $difference")
-    new cashISAAccount(accountNumber, balance + depositThreshold)
-  } else {
-    new cashISAAccount(accountNumber, balance + amount)
-  }
-
-  override def withdraw(amount: Double) = {
-    println("You cant withdraw")
-    this
-  }
-}
-
-class Person(name : String, age: Int, private val bankAccount: BankAccount) {
-
-  def this(name : String, age : Int) = this(name, age, new SavingsAccount("123", 50.00))
-  def this(name : String) = this(name, age = 0, new SavingsAccount("123", 0.00))
-
-  private val years : String = if(age == 1) "year" else "years"
-
-  def speak() : String = {
-    if (name == "adam") {
-      "You don't get a hello."
-    } else {
-      s"Hello $name, you are $age $years old. \n You have $bankAccount in your account."
-    }
-  }
-
-}
 
 object Prompt {
 
